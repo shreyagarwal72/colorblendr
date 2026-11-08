@@ -29,6 +29,10 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
     publishing {
         singleVariant("release") {
             withSourcesJar()
@@ -41,4 +45,5 @@ dependencies {
     implementation libs.annotation
     implementation libs.bcprov.jdk15to18
     implementation libs.spake2.android
+    testImplementation 'junit:junit:4.13.2'
 }
